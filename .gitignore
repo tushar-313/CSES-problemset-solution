@@ -1,1 +1,44 @@
+# Compiled executables
+*.out
+*.exe
 *.bin
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# macOS files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# CLion files
+.idea/
+
+# Build directories
+build/
+cmake-build-*/
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Competitive Programming Helper
+.cph/

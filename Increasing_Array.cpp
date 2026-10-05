@@ -42,20 +42,23 @@ typedef set<int> si;
 typedef set<char> sc;
 
 void solve() {
-    ll n;
+    int n;
     cin>>n;
-    ll ans=0;
-    ll temp=5;
-    while(n/temp >0){
-        ans+= n/temp;
-        temp*=5;
+    vi s(n);
+    f(i,n) cin>>s[i];
+    long long ans = 0;
+    for(int i = 0; i < n-1; i++){
+        if(s[i] > s[i+1]){
+             ans+= s[i]- s[i+1];
+             s[i+1] =s[i];
+        }
     }
     cout<<ans<<endl;
 }
 
 int main() {
     fast
-   
+    
         solve();
     
     return 0; 

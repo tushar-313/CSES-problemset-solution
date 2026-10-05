@@ -41,33 +41,17 @@ typedef map<char, int> mci;
 typedef set<int> si;
 typedef set<char> sc;
 
-void solve() {
-    ll y,x;
-    cin>>y>>x;
-    x--; y--;
-    if(x == y){
-        cout<<x*x + y+1<<endl;
-    }
-    else if((x > y) && (x % 2 != 0)){
-        cout<<x*x + y + 1<<endl;
-    }
-     else if((x > y) && (x % 2 == 0)){
-        cout<< (x+1)*(x+1) - y<<endl;
-    }
-     else if((y > x) && (y % 2 == 0)){
-        cout<<y*y + x + 1<<endl;
-    }
-      else if((y > x) && (y % 2 != 0)){
-        cout<< (y+1)*(y+1) - x<<endl;
-    }
-}
 
 int main() {
     fast
-    int t;
-    cin >> t;
-    while (t--) {
-        solve();
-    }
+     long long
+      n;
+      cin>>n;
+      while(n != 1){
+          cout<<n<<" ";
+        if(n%2 == 0) n = n/2;
+        else n = n*3+1;
+      }
+      cout<<"1"<<endl;
     return 0; 
 }

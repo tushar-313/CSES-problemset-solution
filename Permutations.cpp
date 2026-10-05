@@ -45,19 +45,14 @@ typedef set<char> sc;
 
 int main() {
     fast
-    string s;
-    int c=1, maxi=0;
-    cin>>s;
-    for(int i=0; i<s.size()-1; i++){
-        if(s[i]==s[i+1]){
-            c++;
-        }
-        else{
-            maxi= max(c, maxi);
-            c=1;
-        }
-    }
-    maxi= max(c, maxi);
-    cout<<maxi<<endl;
+   int n ;
+   cin>>n;
+   if(n == 1) cout<<"1\n";
+   else if(n < 4) cout<<"NO SOLUTION\n";
+   else{
+       for(int j = 2; j <= n; j+=2) cout<<j<<" ";
+       for(int i = 1; i <= n; i+=2) cout<<i<<" ";
+    cout<<endl;
+   }
     return 0; 
 }

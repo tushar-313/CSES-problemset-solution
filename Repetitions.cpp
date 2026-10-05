@@ -11,7 +11,9 @@
 #include <cmath>
 using namespace std;
 
-#define fast ios::sync_with_stdio(false); cin.tie(nullptr);
+#define fast                     \
+    ios::sync_with_stdio(false); \
+    cin.tie(nullptr);
 
 #define ll long long
 #define endl '\n'
@@ -19,7 +21,7 @@ using namespace std;
 #define ppb pop_back
 #define all(x) (x).begin(), (x).end()
 #define f(i, n) for (int i = 0; i < (n); i++)
-#define rep(i, a, b) for(int i = a; i < b; i++)
+#define rep(i, a, b) for (int i = a; i < b; i++)
 #define each(x, a) for (auto &x : a)
 const int MOD = 1e9 + 7;
 #define yes cout << "YES\n"
@@ -41,23 +43,32 @@ typedef map<char, int> mci;
 typedef set<int> si;
 typedef set<char> sc;
 
-void solve() {
-    
-}
-
-int main() {
-    fast
-    int n;
-    cin>>n;
-    vi ar(n);
-    f(i,n) cin>>ar[i];
-    ll ans=0;
-    for(int i=1; i< n; i++){
-        if((ar[i]-ar[i-1]) < 0){
-            ans+= (ar[i-1]-ar[i]);
-            ar[i] = ar[i-1];
+void solve()
+{
+    string s;
+    cin >> s;
+    int c = 1;
+    int maxi = INT_MIN;
+    int sz = s.size();
+    for (int i = 1; i < sz; i++)
+    {
+        if (s[i] == s[i - 1])
+            c++;
+        else
+        {
+            maxi = max(maxi, c);
+            c = 1;
         }
     }
-    cout<<ans;
-    return 0; 
+    maxi = max(maxi, c);
+    cout << maxi << endl;
+}
+
+int main()
+{
+    fast;
+
+    solve();
+
+    return 0;
 }

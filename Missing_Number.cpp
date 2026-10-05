@@ -42,42 +42,24 @@ typedef set<int> si;
 typedef set<char> sc;
 
 void solve() {
-    
+    int n;
+    cin>>n;
+    unordered_set<int> st;
+    for(int i =1 ; i<n; i++){
+        int x;
+        cin>>x;
+        st.insert(x);
+    }
+    for(int i= 1; i<=n; i++){
+        if(!st.count(i)){
+            cout<<i<<endl;
+            return ;
+        }
+    }
 }
 
 int main() {
     fast
-    int t;
-    cin >> t;
-    if(t==2 || t==3){
-        cout<<"NO SOLUTION\n";
-        return 0;
-    }
-    if(t==1) {
-        cout<<"1\n";
-        return 0;
-    }
-    if(t==4){
-        cout<<"2 4 1 3\n";
-        return 0;
-    }
-    int od=1;
-    if(t%2){
-        for(int i=0; i<t/2+1; i++){
-        cout<<od<<" ";
-        od+=2;
-    }
-    }
-    else{
-    for(int i=0; i<t/2; i++){
-        cout<<od<<" ";
-        od+=2;
-    }
-}
-    od=2;
-    for(int i=0; i<t/2; i++){
-        cout<<od<<" ";
-        od+=2;
-    }
+    solve();
     return 0; 
 }
